@@ -5,7 +5,7 @@ android-scripts
 
 * Sets up cron on Android. Tested on Galaxy Nexus 4.4.4. Put the commands you want to run in the file named "root" in this form:
 
-[minute] [hour of the day] [day] [week] [month] [your command here]
+[minute] [hour of the day] [day of month] [month] [day of week] [your command here]
 
 Use a * to represent every minute/hour/day/week/month.
 
