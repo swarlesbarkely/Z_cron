@@ -1,1 +1,5 @@
-0 * * * * sh /etc/cron.d/trim.sh;
+* * * * * sh /etc/cron.d/minutely/*;
+
+0 * * * * sh /etc/cron.d/hourly/*;
+
+0 3 * * * sh /etc/cron.d/daily/*;
