@@ -1,9 +1,13 @@
 android-scripts
 ===============
 
-* Place Z_cron in /data/media/0, edit "root," then run cronsetup.sh as root
+* Place Z_cron in /data/media/0 then run cronsetup.sh as root
 
-* Sets up cron on Android. Tested on Galaxy Nexus 4.4.4. Put the commands you want to run in the file named "root" in this form:
+* Sets up cron on Android. Tested on Galaxy Nexus 4.4.4. Put the scripts you want to run in the the proper folder (minutely, hourly, or daily).
+
+
+Cron Info
+=========
 
 [minute] [hour of the day] [day of month] [month] [day of week] [your command here]
 
