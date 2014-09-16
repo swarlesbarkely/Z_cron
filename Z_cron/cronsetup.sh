@@ -8,11 +8,11 @@ mkdir /etc/cron.d/;
 
 ### Move files ###
 
-cp /sdcard/Z_cron/cron /etc/init.d;
-cp -R /sdcard/Z_cron/hourly /etc/cron.d/hourly;
-cp -R /sdcard/Z_cron/daily /etc/cron.d/daily;
-cp -R /sdcard/Z_cron/minutely /etc/cron.d/minutely;
-cp -R /sdcard/Z_cron/crontabs /etc/cron.d/crontabs;
+cp /data/media/0/Z_cron/cron /etc/init.d;
+cp -R /data/media/0/Z_cron/hourly /etc/cron.d/hourly;
+cp -R /data/media/0/Z_cron/daily /etc/cron.d/daily;
+cp -R /data/media/0/Z_cron/minutely /etc/cron.d/minutely;
+cp -R /data/media/0/Z_cron/crontabs /etc/cron.d/crontabs;
 
 chmod 755 /etc/init.d/cron;
 
