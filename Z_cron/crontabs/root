@@ -1,0 +1,5 @@
+* * * * * sh /etc/cron.d/crontabs/run_minutely;
+
+0 * * * * sh /etc/cron.d/crontabs/run_hourly;
+
+0 3 * * * sh /etc/cron.d//crontabs/run_daily;
