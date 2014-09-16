@@ -1,0 +1,7 @@
+#!/system/bin/sh
+
+### Cleans up some stuff on /data ###
+
+rm /data/anr/traces.txt;
+
+rm /data/tombstones/*;
