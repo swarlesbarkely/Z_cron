@@ -1,0 +1,5 @@
+#!/system/bin/sh
+
+for each in /etc/cron.d/hourly/* ;
+do sh $each;
+done;
