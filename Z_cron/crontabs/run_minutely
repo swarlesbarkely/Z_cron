@@ -1,0 +1,5 @@
+#!/system/bin/sh
+
+for each in /etc/cron.d/minutely/* ;
+do sh $each;
+done;
