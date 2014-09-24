@@ -2,17 +2,19 @@
 
 mount -o rw,remount /system;
 
+dir=$(dirname -- "$0");
+
 ### Make proper directives ###
 
 mkdir /etc/cron.d/;
 
 ### Move files ###
 
-cp /data/media/0/Z_cron/cron /etc/init.d;
-cp -R /data/media/0/Z_cron/hourly /etc/cron.d/hourly;
-cp -R /data/media/0/Z_cron/daily /etc/cron.d/daily;
-cp -R /data/media/0/Z_cron/minutely /etc/cron.d/minutely;
-cp -R /data/media/0/Z_cron/crontabs /etc/cron.d/crontabs;
+cp $dir/Z_cron/cron /etc/init.d;
+cp -R $dir/Z_cron/hourly /etc/cron.d/hourly;
+cp -R $dir/Z_cron/daily /etc/cron.d/daily;
+cp -R $dir/Z_cron/minutely /etc/cron.d/minutely;
+cp -R $dir/Z_cron/crontabs /etc/cron.d/crontabs;
 
 chmod 755 /etc/init.d/cron;
 
