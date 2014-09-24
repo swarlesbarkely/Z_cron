@@ -14,5 +14,3 @@ Use a * to represent every minute/hour/day/week/month.
 Ex. This will run every day at 4:00 am and 4:30 am:
 
 0,30 4 * * * echo "Go back to sleep"
-
-Just edit "root" then run the script. The init.d script will start cron on reboot.
