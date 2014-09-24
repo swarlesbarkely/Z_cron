@@ -2,6 +2,6 @@
 
 ### Cleans up some stuff on /data ###
 
-rm /data/anr/traces.txt;
+rm /data/anr/*;
 
 rm /data/tombstones/*;
