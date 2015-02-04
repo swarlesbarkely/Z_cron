@@ -1,0 +1,36 @@
+### Set cycles to [k] to check screen and toggle data accordingly every [k] minutes; Default is 5 ###
+
+cycles = 5
+
+if not /sdcard/.data_toggle_counter.txt; then
+echo 1 > /sdcard/.data_toggle_counter.txt
+fi
+
+x = cat /sdcard/.data_toggle_counter.txt
+
+dumpsys power  > /sdcard/.z_power.txt
+dumpsys connectivity > /sdcard/.z_connectivity.txt
+
+if grep -q -i 'Display Power: state=OFF' /sdcard/.z_power.txt; then
+
+	if $x >= $cycles; then
+
+		if grep -q -i 'mActiveDefaultNetwork: 0 CONNECTED/CONNECTED' /sdcard/.z_connectivity.txt; then
+
+		svc data disable
+
+		else
+		svc data enable
+
+		fi
+
+	x = 0
+	fi
+
+x = $x + 1
+echo $x /sdcard/.data_toggle_counter.txt
+
+else
+svc data enable
+
+fi
