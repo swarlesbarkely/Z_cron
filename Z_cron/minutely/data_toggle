@@ -28,7 +28,7 @@ if grep -q -i 'Display Power: state=OFF' /sdcard/.z_power.txt; then
 	fi
 
 x=$((x+1))
-echo "$x" /sdcard/.data_toggle_counter.txt
+echo "$x" > /sdcard/.data_toggle_counter.txt
 
 else
 svc data enable
