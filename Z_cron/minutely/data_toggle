@@ -1,6 +1,6 @@
 ### Set cycles to [k] to check screen and toggle data accordingly every [k] minutes; Default is 5 ###
 
-cycles = 5
+cycles=5
 
 if [ ! -e /sdcard/.data_toggle_counter.txt ]; then
 echo 1 > /sdcard/.data_toggle_counter.txt
