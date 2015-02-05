@@ -6,7 +6,7 @@ if [ ! -e /sdcard/.data_toggle_counter.txt ]; then
 echo 1 > /sdcard/.data_toggle_counter.txt
 fi
 
-x='cat /sdcard/.data_toggle_counter.txt'
+x=$(cat /sdcard/.data_toggle_counter.txt)
 
 dumpsys power  > /sdcard/.z_power.txt
 dumpsys connectivity > /sdcard/.z_connectivity.txt
