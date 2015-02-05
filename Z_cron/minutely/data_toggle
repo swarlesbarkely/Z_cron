@@ -24,7 +24,7 @@ if grep -q -i 'Display Power: state=OFF' /sdcard/.z_power.txt; then
 
 		fi
 
-	x = 0
+	x=0
 	fi
 
 x=$((x+1))
