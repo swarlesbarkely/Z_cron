@@ -2,20 +2,20 @@
 
 cycles=5
 
-if [ ! -e /sdcard/.data_toggle_counter.txt ]; then
-echo 1 > /sdcard/.data_toggle_counter.txt
+if [ ! -e /storage/emulated/0/.data_toggle_counter.txt ]; then
+echo 1 > /storage/emulated/0/.data_toggle_counter.txt
 fi
 
-x=$(cat /sdcard/.data_toggle_counter.txt)
+x=$(cat /storage/emulated/0/.data_toggle_counter.txt)
 
-dumpsys power  > /sdcard/.z_power.txt
-dumpsys connectivity > /sdcard/.z_connectivity.txt
+dumpsys power  > /storage/emulated/0/.temp.txt
+dumpsys connectivity >> /storage/emulated/0/.temp.txt
 
-if grep -q -i 'Display Power: state=OFF' /sdcard/.z_power.txt; then
+if grep -q -i 'Display Power: state=OFF' /storage/emulated/0/.temp.txt; then
 
 	if (($x >= $cycles)); then
 
-		if grep -q -i 'mActiveDefaultNetwork: 0 CONNECTED/CONNECTED' /sdcard/.z_connectivity.txt; then
+		if grep -q -i 'mActiveDefaultNetwork: 0 CONNECTED/CONNECTED' /storage/emulated/0/.temp.txt
 
 		svc data disable
 
@@ -28,9 +28,11 @@ if grep -q -i 'Display Power: state=OFF' /sdcard/.z_power.txt; then
 	fi
 
 x=$((x+1))
-echo "$x" > /sdcard/.data_toggle_counter.txt
+echo "$x" > /storage/emulated/0/.data_toggle_counter.txt
 
 else
 svc data enable
 
 fi
+
+rm /storage/emulated/0/.temp.txt
