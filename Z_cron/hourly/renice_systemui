@@ -1,4 +1,4 @@
 string=$(ps | grep "systemui")
-id=${$string:0:5}
+id=${string:0:6}
 
 busybox renice -10 -u $id
