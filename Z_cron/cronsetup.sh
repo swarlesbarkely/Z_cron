@@ -10,11 +10,13 @@ mkdir /etc/cron.d/;
 
 ### Move files ###
 
-cp $dir/Z_cron/cron /etc/init.d;
+cp $dir/cron /etc/init.d;
 cp -R $dir/hourly /etc/cron.d/hourly;
 cp -R $dir/daily /etc/cron.d/daily;
 cp -R $dir/minutely /etc/cron.d/minutely;
 cp -R $dir/crontabs /etc/cron.d/crontabs;
+
+### Fix permissions ###
 
 chmod 755 /etc/init.d/cron;
 
