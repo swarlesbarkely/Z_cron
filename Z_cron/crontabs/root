@@ -2,4 +2,6 @@
 
 0 * * * * sh /etc/cron.d/crontabs/run_hourly;
 
-0 3 * * * sh /etc/cron.d//crontabs/run_daily;
+0 3 * * * sh /etc/cron.d/crontabs/run_daily;
+
+0 22 * * * sh /etc/cron.d/crontabs/night_mode;
