@@ -16,7 +16,7 @@ if grep -q -i 'Display Power: state=OFF' /storage/emulated/0/.temp.txt; then
 	if (($x >= $cycles)); then
 
 		if grep -q -i 'mActiveDefaultNetwork: 0 CONNECTED/CONNECTED' /storage/emulated/0/.temp.txt
-
+		then
 		svc data disable
 
 		else
